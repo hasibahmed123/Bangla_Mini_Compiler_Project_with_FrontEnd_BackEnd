@@ -18,7 +18,7 @@ bangla_compiler.exe
 Parentheses
 লেখ ( এক যোগ দুই ) গুণ তিন;
 
-String:
+String Generate:
 লেখ "বাংলা কম্পাইলার কাজ করছে";
 
 পরীক্ষা 2: যদি-নাহলে
