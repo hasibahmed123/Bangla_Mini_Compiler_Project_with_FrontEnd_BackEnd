@@ -128,3 +128,187 @@ pre {
 .hidden {
     display: none;
 }
+
+
+
+/* --- GLOBAL RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Bengali", sans-serif;
+}
+
+/* --- BODY STYLE --- */
+body {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+/* --- CONTAINER --- */
+.container {
+    width: 80%;
+    max-width: 700px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.45);
+    transition: 0.4s ease-in-out;
+}
+.container:hover {
+    transform: translateY(-3px);
+}
+
+/* --- HEADINGS --- */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+p {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+/* --- TEXTAREA --- */
+textarea {
+    width: 100%;
+    height: 180px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    background: #0f172a;
+    color: #e2e8f0;
+    resize: none;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+textarea:focus {
+    border: 2px solid #38bdf8;
+    box-shadow: 0px 0px 8px #38bdf8aa;
+}
+
+/* --- BUTTON --- */
+button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 12px;
+    color: #0f172a;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #0ea5e9;
+}
+
+/* --- LOADING ANIMATION --- */
+.loading {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.spinner {
+    width: 45px;
+    height: 45px;
+    border: 5px solid #38bdf8;
+    border-top-color: transparent;
+    border-radius: 50%;
+    margin: auto;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- OUTPUT + ERROR BOXES --- */
+.output, .error {
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 18px;
+}
+
+.output {
+    background: #0f766e;
+    border-left: 6px solid #2dd4bf;
+}
+.error {
+    background: #7f1d1d;
+    border-left: 6px solid #ef4444;
+}
+
+pre {
+    white-space: pre-wrap;
+    color: #f1f5f9;
+    font-size: 16px;
+}
+
+/* --- HIDDEN CLASS --- */
+.hidden {
+    display: none;
+}
+
+
+
+/* 3rd change */
+
+/* --- FLOATING ORBS / PARTICLES --- */
+.floating-objects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.orb {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #38bdf8, #0ea5e9);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: floatUp 8s linear infinite;
+    filter: blur(2px);
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-10vh) translateX(40px);
+        opacity: 0;
+    }
+}
+
+/* Some variety for each orb */
+.orb:nth-child(2) { width: 20px; height: 20px; animation-duration: 9s; animation-delay: 1s; }
+.orb:nth-child(3) { width: 30px; height: 30px; animation-duration: 12s; animation-delay: 3s; }
+.orb:nth-child(4) { width: 18px; height: 18px; animation-duration: 10s; animation-delay: 2s; }
+.orb:nth-child(5) { width: 40px; height: 40px; animation-duration: 15s; animation-delay: 4s; }
+.orb:nth-child(6) { width: 16px; height: 16px; animation-duration: 7s; animation-delay: 1s; }
+.orb:nth-child(7) { width: 22px; height: 22px; animation-duration: 11s; animation-delay: 5s; }
+
+
